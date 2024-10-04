@@ -33,6 +33,8 @@ header {
     z-index: 1000;
 }
 
+
+
 /* Navigation Bar */
 
 nav {
@@ -56,6 +58,7 @@ nav ul {
 }
 
 nav ul li {
+    margin: auto;
     margin-left: 2rem;
 }
 
@@ -163,6 +166,13 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+
+
+
+
+
+
+
 /* Key Features Section */
 #innovations {
     background-color: #000000; /* Constant dark background */
@@ -177,24 +187,24 @@ h1, h2, h3 {
     margin-bottom: 20px;
 }
 
-.innovation-card {
+.innovation-card{
     width: 95%;
     margin: auto;
 }
 
-.innovation-card h3 {
+.innovation-card h3{
     font-size: 2rem;
 }
 
-.innovation-card h4 {
+.innovation-card h4{
     font-size: 1.4rem;
 }
 
-.innovation-card p {
+.innovation-card p{
     font-size: 1.3rem;
 }
 
-.statistic {
+.statistic{
     font-size: 1.5rem !important;
     margin-top: -1.5rem;
 }
@@ -202,7 +212,6 @@ h1, h2, h3 {
 .innovation-grid {
     display: block; /* Single column layout */
 }
-
 .video-wrapper {
     margin-top: 15px;
 }
@@ -228,6 +237,17 @@ video {
 .resources a:hover {
     text-decoration: underline; /* Underline on hover for better visibility */
 }
+
+
+
+
+
+
+/* Statistics Section */
+
+
+
+
 
 /* Further Feature Section */
 #further-features h1 {
@@ -282,6 +302,12 @@ video {
     height: 150px;
 }
 
+
+
+
+
+
+
 /* How it works section */
 #how-it-works h1 {
     font-size: 2rem;
@@ -328,6 +354,10 @@ video {
     box-shadow: 0 8px 16px var(--box-shadow);
 }
 
+
+
+
+
 /* Feature Section */
 #features {
     padding: 3rem 1rem;
@@ -352,83 +382,126 @@ video {
     padding: 1.5rem;
     text-align: left;
     box-shadow: 0 4px 8px var(--box-shadow);
-    border-radius: var(--border-radius);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .feature-item h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.feature-item h4 {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
 }
 
 .feature-item p {
     color: #cccccc;
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.4;
+    margin-bottom: 1rem;
 }
 
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px var(--box-shadow);
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 1200px) {
-    .hero-text h1 {
-        font-size: 2.5rem; /* Adjust heading size */
-    }
-
-    .hero-text p {
-        font-size: 1rem; /* Adjust paragraph size */
-    }
-
-    .further-features-content,
-    .how-it-works-content {
-        padding: 2rem 2%; /* Adjust padding for smaller screens */
-    }
-
-    .additional-features,
-    .steps,
-    .feature-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    }
-
-    .feature-item {
-        padding: 1rem; /* Adjust padding */
-    }
+.feature-item img {
+    width: 100%;
+    height: auto;
 }
 
 @media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2rem; /* Further reduce heading size */
-    }
-
-    .hero-text p {
-        font-size: 0.9rem; /* Further reduce paragraph size */
-    }
-
-    .video-wrapper {
-        width: 100%; /* Make video responsive */
-        height: auto; /* Adjust height */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-    }
-
-    .logo {
-        margin-left: 0; /* Remove left margin on smaller screens */
-    }
-
-    .innovation-card {
-        width: 100%; /* Make card width responsive */
-    }
-
-    /* Adjust button sizes */
-    .btn {
-        font-size: 0.9rem; /* Reduce button font size */
-        padding: 0.5rem 1rem; /* Adjust padding */
+    .feature-grid {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
     }
 }
 
-/* Additional media queries can be added for smaller devices as needed */
+
+
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #000000; /* Black footer background */
+    color: var(--text-color);
+    padding: 2rem 5%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+
+
+@media (max-width: 1310px) {
+    .logo {
+        margin-left: 0; /* Remove left margin for mobile */
+        margin-bottom: 1rem; /* Add space below the logo */
+    }
+}
+
+/* Add this to your existing CSS */
+
+/* Hamburger icon styles */
+.hamburger {
+    display: none; /* Initially hide the hamburger icon */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 24px; /* Adjust size */
+    margin-right: 20px; /* Space from right */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    nav ul {
+        display: none; /* Hide nav items initially */
+        flex-direction: column; /* Stack items */
+        width: 100%; /* Full width */
+        background-color: #000000; /* Background for dropdown */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Adjust based on navbar height */
+        left: 0; /* Align left */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    nav ul.active {
+        display: flex; /* Show nav items when active */
+        margin-top: 5rem;
+        padding: 2rem;
+    }
+
+    nav ul li {
+        margin: 1rem; /* Remove margin between items */
+    }
+
+    nav ul li a {
+        padding: 1rem; /* Adjust padding for links */
+        width: 100%; /* Full width for clickable area */
+        text-align: center; /* Center align text */
+    }
+}
