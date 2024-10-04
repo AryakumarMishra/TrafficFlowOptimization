@@ -15,9 +15,18 @@
     <header>
       <nav>
         <div class="logo"><h1>TRAFFIC FLOW OPTIMIZATION</h1></div>
-        <ul>
+        <div class="hamburger" id="hamburger">
+          &#9776;
+          <!-- Unicode for hamburger icon -->
+        </div>
+        <ul id="nav-list">
           <li><a href="#innovations">Features</a></li>
           <li><a href="#how-it-works">How it works</a></li>
+          <li>
+            <a href="liveFeed.html"
+              ><button class="btn btn-secondary">Live Feed</button></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -510,5 +519,23 @@
     <footer>
       <p>&copy; 2024 Traffic Flow Optimization. All rights reserved.</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get elements
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.getElementById("nav-list");
+
+        // Check if elements are found
+        if (hamburger && navList) {
+          // Toggle the 'active' class on click
+          hamburger.addEventListener("click", () => {
+            navList.classList.toggle("active");
+          });
+        } else {
+          console.error("Hamburger or navList not found in the DOM.");
+        }
+      });
+    </script>
   </body>
 </html>
