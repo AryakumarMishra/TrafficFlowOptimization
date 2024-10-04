@@ -491,7 +491,7 @@ footer p {
 
     nav ul.active {
         display: flex; /* Show nav items when active */
-        margin-top: 5rem;
+        margin-top: 4rem;
         padding: 2rem;
     }
 
